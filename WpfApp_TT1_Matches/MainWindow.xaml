@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_TT1_Matches"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Matches" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="LightBlue" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Margin="0,40,0,10">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightBlue" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        <Run FontSize="20" Foreground="Red" FontWeight="Bold">Enter number</Run>
+        </TextBlock>
+        <TextBox  x:Name="tbNumber" SelectionBrush="Blue" Height="30" TextWrapping="Wrap" FontSize="20" Foreground="BlueViolet" TextAlignment="Center" Margin="0,0,0,10"></TextBox>
+        <Button x:Name="acceptButton" Content="ОК" IsDefault="True" Click="acceptButton_Click" FontSize="20" Foreground="#FF498B00" Margin="0,0,0,10" >
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="LightGreen" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox  x:Name="tbMsg" SelectionBrush="Blue" Height="91" TextWrapping="Wrap" FontSize="20" Foreground="BlueViolet" Margin="0,0,0,10"></TextBox>
+        <Button x:Name="CleartButton" Content="Clear" IsDefault="True" Click="ClearButton_Click" FontSize="20" Foreground="#FF498B00" Margin="0,0,0,10" >
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="LightGreen" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+    </StackPanel>
+    <Window.Background>
+        <SolidColorBrush Color="LightBlue" />
+    </Window.Background>
+    <Window.Foreground>
+        <SolidColorBrush Color="#FF8B005C" />
+    </Window.Foreground>
 </Window>

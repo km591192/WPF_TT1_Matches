@@ -24,5 +24,25 @@ namespace WpfApp_TT1_Matches
         {
             InitializeComponent();
         }
+
+        Matches matches = new Matches();
+
+        private int N = 0;
+        private string S = String.Empty;
+
+
+        private void acceptButton_Click(object sender, RoutedEventArgs e)
+        {
+            N = Convert.ToInt32(tbNumber.Text);
+            matches.checkn(N);
+            tbMsg.Text += matches.S + "\n";
+            tbMsg.Text += matches.minmatches(N) + "\n";
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            tbNumber.Text = String.Empty;
+            tbMsg.Text = String.Empty;
+        }
     }
 }
